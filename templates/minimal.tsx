@@ -16,7 +16,10 @@ export function MinimalTemplate({ data }: { data: ResumeData }) {
       {/* ── Header ── */}
       <div className="mb-6">
         {personalInfo.fullName && (
-          <h1 className="text-3xl font-light mb-2">{personalInfo.fullName}</h1>
+          <h1 className="text-3xl font-light mb-1">{personalInfo.fullName}</h1>
+        )}
+        {personalInfo.jobTitle && (
+          <p className="text-base font-normal text-gray-700 mb-2">{personalInfo.jobTitle}</p>
         )}
         {contactParts.length > 0 && (
           <p className="text-sm text-gray-500">{contactParts.join(' · ')}</p>

@@ -48,9 +48,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
     return (
       <div className={className}>
-        {/* Scaled preview for the UI */}
-        <div className="bg-white border border-[#E5E7EB] rounded-lg shadow-sm overflow-hidden">
-          <div className="origin-top-left scale-[0.5] w-[200%] min-h-[283%]">
+        {/* Crisp Paper Preview for the UI */}
+        <div className="bg-white border border-[#E5E7EB] rounded-lg shadow-md overflow-x-auto p-2 sm:p-4">
+          <div className="max-w-[850px] mx-auto bg-white border border-[#E2E8F0] shadow-sm rounded-sm">
             <TemplateComponent data={resumeData} />
           </div>
         </div>

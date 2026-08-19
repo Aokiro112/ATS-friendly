@@ -18,6 +18,9 @@ export function ModernTemplate({ data }: { data: ResumeData }) {
         {personalInfo.fullName && (
           <h1 className="text-2xl font-bold mb-1">{personalInfo.fullName}</h1>
         )}
+        {personalInfo.jobTitle && (
+          <p className="text-base font-semibold text-[#2563EB] mb-1.5">{personalInfo.jobTitle}</p>
+        )}
         {contactParts.length > 0 && (
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600">
             {contactParts.map((part, i) => (

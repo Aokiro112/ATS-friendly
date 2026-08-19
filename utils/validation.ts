@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const personalInfoSchema = z.object({
   fullName: z.string().min(1, 'Full name is required'),
+  jobTitle: z.string().optional().default(''),
   email: z.string().email('Please enter a valid email'),
   phone: z.string().optional().default(''),
   location: z.string().optional().default(''),

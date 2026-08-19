@@ -15,17 +15,31 @@ export function PersonalInfoForm() {
       </h2>
 
       <div className="space-y-3">
-        {/* Full Name */}
-        <div className="space-y-1.5">
-          <Label htmlFor="fullName" className="text-sm font-medium text-foreground">
-            Full Name <span className="text-red-500">*</span>
-          </Label>
-          <Input
-            id="fullName"
-            placeholder="John Doe"
-            value={personalInfo.fullName}
-            onChange={(e) => updatePersonalInfo({ fullName: e.target.value })}
-          />
+        {/* Full Name & Job Title */}
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <div className="space-y-1.5">
+            <Label htmlFor="fullName" className="text-sm font-medium text-foreground">
+              Full Name <span className="text-red-500">*</span>
+            </Label>
+            <Input
+              id="fullName"
+              placeholder="Michael Harris"
+              value={personalInfo.fullName}
+              onChange={(e) => updatePersonalInfo({ fullName: e.target.value })}
+            />
+          </div>
+
+          <div className="space-y-1.5">
+            <Label htmlFor="jobTitle" className="text-sm font-medium text-foreground">
+              Job Title / Headline
+            </Label>
+            <Input
+              id="jobTitle"
+              placeholder="Digital Marketing | SEO | SEM | Content Marketing"
+              value={personalInfo.jobTitle || ''}
+              onChange={(e) => updatePersonalInfo({ jobTitle: e.target.value })}
+            />
+          </div>
         </div>
 
         {/* Email */}
